@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Package: course_practice",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "course_practice"
+        }
+    ]
+}
