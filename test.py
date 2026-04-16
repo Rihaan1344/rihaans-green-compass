@@ -7,6 +7,7 @@
 
 # TODO: Update the main function to your needs or remove it.
 
+#updated app
+#installed new feature
 
-a = 'hello_world'
-b = 'hello_world'
+a= "new feature"
