@@ -16,8 +16,8 @@ yinterval = 115
 xinterval = 80
 size = 80
 
-ser = serial.Serial('/dev/cu.usbmodem1301', 115200, timeout=1)
-time.sleep(2)
+# ser = serial.Serial('/dev/cu.usbmodem1301', 115200, timeout=1)
+# time.sleep(2)
 
 class Player:
     def __init__(self):
@@ -88,22 +88,19 @@ player = Player()
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            ser.close()
             running = False
-            
-    data = ser.readline().decode().strip()
-    if data.startswith("LEFT"):
+        
+    keys = pygame.key.get_pressed()
+
+    if keys[pygame.K_LEFT]:
             player.moving_left = True
             player.moving_right = False
-            player.velocity = int(data[5:])  # Remove "LEFT:" prefix and convert to int
-    elif data.startswith("RIGHT"):
+    elif keys[pygame.K_RIGHT]:
             player.moving_right = True
             player.moving_left = False
-            player.velocity = int(data[6:])  # Remove "RIGHT:" prefix and convert to int
-    elif data.startswith("STOP"):
+    elif keys[pygame.K_SPACE]:
             player.moving_left = False
             player.moving_right = False
-            player.velocity = int(data[5:])  # Remove "STOP:" prefix and convert to int
 
 
     player.update()

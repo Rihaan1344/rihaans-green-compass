@@ -3,7 +3,7 @@ import time
 import serial
 
 pygame.init()
-
+33
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 pygame.display.set_caption("Platformer")
 
