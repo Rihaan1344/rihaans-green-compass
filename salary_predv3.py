@@ -8,5 +8,3 @@ df = pd.read_csv(
     "kagglehub/datasets/nalisha/job-salary-prediction-dataset/versions/1/job_salary_prediction_dataset.csv" 
     #ignore the path its huge ik
 ).dropna()
-
-df.to_excel("job_prediction_dataset.xlsx", sheet_name="data", index=False)
