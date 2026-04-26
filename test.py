@@ -1,13 +1,6 @@
-# /// test
-# requires-python = ">=X.XX" TODO: Update this to the minimum Python version you want to support
-# dependencies = [
-#   TODO: Add any dependencies your script requires
-# ]
-# ///
+import qrcode
 
-# TODO: Update the main function to your needs or remove it.
+data = "https://example.com"
 
-#updated app
-#installed new feature
-
-a= "new feature"
+qr = qrcode.make(data)
+qr.save("qrcode.png")
