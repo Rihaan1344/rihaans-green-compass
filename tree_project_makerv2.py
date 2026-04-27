@@ -29,18 +29,17 @@ def posterize(full_scientific_name: str, species: str, genus: str, family: str, 
     #fonts
 
     fonts_dir = os.path.join("/System", "Library", "Fonts")
+    
+    sname_fontpath = os.path.join(os.getcwd(), "Capriola", "Capriola-Regular.ttf")
+    sname_font = ImageFont.truetype(sname_fontpath, 120)
+    sname_font_small = ImageFont.truetype(sname_fontpath, 70)
 
-    def get_font(fontname, size):
-        font_path = os.path.join(fonts_dir, fontname)
-        return ImageFont.truetype(font_path, size)
+    cname_fontpath = os.path.join(os.getcwd(), "Glass_Antiqua", "GlassAntiqua-Regular.ttf")
+    cname_font = ImageFont.truetype(cname_fontpath, 175)
 
-    sname_font = get_font("Supplemental/Futura.ttc", 120)
-    cname_font = get_font("Noteworthy.ttc", 175)
-    sname_font_small = get_font("Supplemental/Futura.ttc", 70)
-
-    body_font = get_font("Supplemental/Hoefler Text.ttc", 90)
-
-    body_font_small = get_font("Supplemental/Hoefler Text.ttc", 60)
+    body_fontpath = os.path.join(os.getcwd(), "Capriola", "Capriola-Regular.ttf")
+    body_font = ImageFont.truetype(body_fontpath, 90)
+    body_font_small = ImageFont.truetype(body_fontpath, 60)
     #load template
 
     template = Image.open(os.path.join(os.getcwd(), "static", "tree_template.png"))
