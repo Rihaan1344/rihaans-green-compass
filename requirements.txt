@@ -1,0 +1,5 @@
+streamlit
+qrcode
+python-dotenv
+Pillow
+
