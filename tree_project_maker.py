@@ -1,12 +1,19 @@
+"""
+NOTE
+
+if you want to run this locally, then uncomment line 9 and line 16
+
+"""
+
 import requests as req
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import os
 import qrcode
 import streamlit as st
 
 # STEP 1: LOAD API KEYS
 
-load_dotenv()
+#load_dotenv()
 
 PLANT_API_KEY = os.getenv("PLANT_API_KEY") or st.secrets["PLANT_API_KEY"]
 TEMPLATE_API_KEY = os.getenv("TEMPLATE_API_KEY") or st.secrets["TEMPLATE_API_KEY"]
