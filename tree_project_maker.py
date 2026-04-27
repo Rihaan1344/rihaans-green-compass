@@ -4,12 +4,16 @@ import os
 import qrcode
 import streamlit as st
 
+# STEP 1: LOAD API KEYS
+
 load_dotenv()
 
-PLANT_API_KEY = os.getenv("PLANT_API_KEY")
-TEMPLATE_API_KEY = os.getenv("TEMPLATE_API_KEY")
+PLANT_API_KEY = os.getenv("PLANT_API_KEY") or st.secrets["PLANT_API_KEY"]
+TEMPLATE_API_KEY = os.getenv("TEMPLATE_API_KEY") or st.secrets["TEMPLATE_API_KEY"]
 
 if not PLANT_API_KEY or not TEMPLATE_API_KEY: raise ValueError("key not found bro. how lock open if not key?")
+
+#STEP 2: USE ST TO GET IMAGES
 
 st.title("Rihaan's Green Compass")
 st.markdown("Upload an image of the bark and the leaf, and you'll get a ready-made QR code which leads you to a beautiful green poster of the tree's scientific information!")
@@ -27,6 +31,9 @@ leaf = st.file_uploader(
 )
 
 st.divider()
+
+#STEP 3: SEND IMAGES TO PLANTNET API
+
 if bark and leaf:
    url = f"https://my-api.plantnet.org/v2/identify/all?api-key={PLANT_API_KEY}"
 
@@ -43,7 +50,7 @@ if bark and leaf:
 
    st.header("Plant classification")
 
-      
+   #STEP 4: PRINT OUT RESULTS
    if "results" not in result or not result["results"]:
       msg = "Could not identify, please try a clearer image"
       print(msg)
@@ -71,6 +78,8 @@ if bark and leaf:
       print("Genus:", genus)
       print("Family:", family)
       print("Common name:", common_name)
+
+      #STEP 5: SEND URL TO POSTER GENERATOR
 
       st.divider()
       st.header("Poster QR code")
@@ -115,6 +124,7 @@ if bark and leaf:
 
       response = req.post(url, json=data, headers=headers)
 
+      #STEP 6: PRINT OUT RESULTS
 
       if response.status_code == 200:
          msg = 'Render request accepted.'
@@ -123,12 +133,16 @@ if bark and leaf:
 
          result = response.json()
 
+         #STEP 7: GENERATE QR
+
          data = result["url"]
          qr = qrcode.make(data)
          path = os.path.join(os.getcwd(), "static", "poster_qr.png")
          qr.save(path)
 
          st.image(path)
+
+         #FINAL: SHOW QR AND LINK
 
          st.markdown("Scan the QR code to view your poster")
          st.caption(f"...or access it directly via ")
