@@ -59,7 +59,7 @@ def posterize(full_scientific_name: str, species: str, genus: str, family: str, 
     #cname y = bottom right y of sname, i.e, bbox[3], + some whitespace
 
     sname_bbox = draw.textbbox((sname_centerx, 75), f"{full_scientific_name}", font = sname_font) #get textbox dimensions
-    cname_bbox = draw.textbbox((x_center(f"{common_name}", cname_font), sname_bbox[3] - 120), "Indian Banyan", font=cname_font)
+    cname_bbox = draw.textbbox((x_center(f"{common_name}", cname_font), sname_bbox[3]), "Indian Banyan", font=cname_font)
 
     if is_out_of_bounds(sname_bbox, dimensions):
         sname_bbox = draw.textbbox((sname_centerx, 75), f"{full_scientific_name}", font = (sname_font := sname_font_small)) 
@@ -67,7 +67,6 @@ def posterize(full_scientific_name: str, species: str, genus: str, family: str, 
 
 
     draw.text((sname_centerx, 75), f"{full_scientific_name}", font=sname_font, fill="black")
-
     draw.text((cname_bbox[0], cname_bbox[1]), f"{common_name}", font=cname_font, fill="black")
 
     #body
