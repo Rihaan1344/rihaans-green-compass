@@ -66,7 +66,12 @@
             "packageManager": "ms-python.python:pip"
         },
         {
-            "path": "pillow_test.py",
+            "path": "pillow_poster_generator.py",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:pip"
+        },
+        {
+            "path": "tree_project_makerv2.py",
             "envManager": "ms-python.python:venv",
             "packageManager": "ms-python.python:pip"
         }
