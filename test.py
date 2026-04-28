@@ -1,6 +1,6 @@
 import qrcode
 
-data = "https://example.com"
+data = "https://banyantreeactivity.tiiny.site/"
 
 qr = qrcode.make(data)
 qr.save("qrcode.png")

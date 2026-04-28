@@ -128,7 +128,11 @@ load_dotenv()
 PLANT_API_KEY = os.getenv("PLANT_API_KEY") or st.secrets["PLANT_API_KEY"]
 IMAGE_API_KEY = os.getenv("IMAGE_API_KEY") or st.secrers["IMAGE_API_KEY"]
 
-if not PLANT_API_KEY: raise ValueError("key not found bro. how lock open if not key?")
+if not PLANT_API_KEY or not IMAGE_API_KEY: raise ValueError(
+    "The API key was not found. Kindly ensure that environment variables and streamlit secrets have been properly callibrated.\n",
+    f"Problem with plant API key?: {not PLANT_API_KEY}\n",
+    f"Problem with image API key?: {not IMAGE_API_KEY}\n"
+    )
 
 #STEP 2: USE ST TO GET IMAGES
 
