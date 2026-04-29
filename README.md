@@ -10,7 +10,8 @@ If you are a non-developer, and a user, you may run the application properly at 
 
 ***
 
-[!NOTE] (FOR DEVELOPERS!)
+[!CAUTION] 
+The following is a technical comment for developers!
 
 This app uses two API keys: [PlantnetAPI](https://my.plantnet.org/) and [IMGbbAPI](https://api.imgbb.com/).
 
