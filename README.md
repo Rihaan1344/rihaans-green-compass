@@ -1,4 +1,4 @@
-**Welcome to Rihaan's Green Compass**
+#**Welcome to Rihaan's Green Compass**
 
 I, Rihaan, student of 9J, studying in Oakridge International School have developed this app on account of _Earth Day 2026._
 
@@ -10,8 +10,8 @@ If you are a non-developer, and a user, you may run the application properly at 
 
 ***
 
-[!CAUTION] 
-The following is a technical comment for developers!
+> [!CAUTION] 
+> The following is a technical comment for developers!
 
 This app uses two API keys: [PlantnetAPI](https://my.plantnet.org/) and [IMGbbAPI](https://api.imgbb.com/).
 
