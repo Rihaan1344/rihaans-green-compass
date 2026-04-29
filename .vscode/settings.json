@@ -16,12 +16,12 @@
             "packageManager": "ms-python.python:pip"
         },
         {
-            "path": "platformer_V1.py",
+            "path": "retired_snakes/platformer_V1.py",
             "envManager": "ms-python.python:venv",
             "packageManager": "ms-python.python:pip"
         },
         {
-            "path": "platformer_V2.py",
+            "path": "retired_snakes/platformer_V2.py",
             "envManager": "ms-python.python:venv",
             "packageManager": "ms-python.python:pip"
         },
@@ -31,7 +31,7 @@
             "packageManager": "ms-python.python:pip"
         },
         {
-            "path": "platformer_jsv_jumping.py",
+            "path": "retired_snakes/platformer_jsv_jumping.py",
             "envManager": "ms-python.python:venv",
             "packageManager": "ms-python.python:pip"
         },
