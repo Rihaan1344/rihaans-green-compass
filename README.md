@@ -8,6 +8,9 @@ This is the github repository with all the code!
 
 If you are a non-developer, and a user, you may run the application properly at this [link](https://coding-but-better-dxagxmwkxdwy5nubjc5jrh.streamlit.app/).
 
+> [!TIP]
+> ### The `static` folder contains pairs of images taken from the same tree(_bark and leaf_), and you can use them for testing!
+
 ***
 
 > [!CAUTION] 
