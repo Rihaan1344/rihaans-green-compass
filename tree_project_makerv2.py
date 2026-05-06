@@ -136,7 +136,7 @@ if not PLANT_API_KEY or not IMAGE_API_KEY: raise ValueError(
 
 #STEP 2: USE ST TO GET IMAGES
 
-#st.title("Rihaan's Green Compass")
+st.title("Rihaan's Green Compass")
 st.markdown("Upload an image of the bark and the leaf, and you'll get a ready-made QR code which leads you to a beautiful green poster of the tree's scientific information!")
 st.divider()
 st.header("Upload images")
