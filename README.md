@@ -1,6 +1,6 @@
  # **Welcome to Rihaan's Green Compass**
 
-I, Rihaan, student of 9J, studying in Oakridge International School have developed this app on account of _Earth Day 2026._
+I, Rihaan, have developed this app on account of _Earth Day 2026._
 
 If you have a tree you wish to identify, simply take a photo of the bark of the tree and leaf of the tree, and upload it to the code. It'll automatically give you the _scientific taxonomy_ and a poster, consisting of the _classification_ and _images_ you uploaded!
 
